@@ -33,7 +33,7 @@ const FormController = ({ label, name, type, options = [], ...rest }) => {
   return (
     <div className="mb-5">
       {type !== "checkbox" && label && (
-        <label className="block mb-1 text-sm font-medium text-gray-700">
+        <label htmlFor={name} className="block mb-1 text-sm font-medium text-gray-700">
           {label}
         </label>
       )}
@@ -41,7 +41,7 @@ const FormController = ({ label, name, type, options = [], ...rest }) => {
       <div className="flex items-center gap-2">
         {renderField()}
         {type === "checkbox" && label && (
-          <label className="text-sm text-gray-700">{label}</label>
+          <label htmlFor={name} className="text-sm text-gray-700">{label}</label>
         )}
       </div>
 
